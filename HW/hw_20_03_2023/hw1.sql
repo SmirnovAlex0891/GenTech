@@ -1,9 +1,11 @@
-create table if not exists reaction (
+create table if not exists reactions (
 reaction_id integer primary key auto_increment,
 user_id integer,
+stream_id integer,
 created_at datetime default current_timestamp,
-is_like bool default true,
-foreign key (user_id) references users(user_id)
+value integer check(value between 1 and 5),
+foreign key (user_id) references users(user_id),
+foreign key (stream_id) references streams(stream_id)
 );
 
 create table if not exists donats (
@@ -17,4 +19,4 @@ foreign key (user_id) references users(user_id),
 foreign key (from_stream) references streams(stream_id)
 );
 
-drop table donats;
+drop table reactions;

@@ -1,4 +1,4 @@
-select * from donations;
+select * from reactions;
 
 insert into users(fullname, country, e_mail, is_blocked)
 value ('Huan Carlos', 'Mexika', 'sffg@hty.com', 1);
@@ -21,7 +21,7 @@ where users.is_blocked = 1;
 select reactions.*, users.fullname 
 from reactions
 join users on reactions.user_id = users.user_id
-order by reaction_id desc
+order by created_at desc
 limit 3;
 
 select donations.*, users.fullname
