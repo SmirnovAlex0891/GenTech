@@ -10,3 +10,4 @@
 - [Home Work 20.03.2023](https://github.com/SmirnovAlex0891/GenTech/tree/master/HW/hw_20_03_2023)
 - [Home Work 24.03.2023](https://github.com/SmirnovAlex0891/GenTech/tree/master/HW/hw_24_03_2023)
 - [Home Work 31.03.2023](https://github.com/SmirnovAlex0891/GenTech/tree/master/HW/hw_31_03_2023)
+- [Home Work 03.04.2023](https://github.com/SmirnovAlex0891/GenTech/tree/master/HW/hw_03_04_2023)
