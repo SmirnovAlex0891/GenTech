@@ -2,9 +2,9 @@
 -- 	Customers.CustomerID	(1:M)	Orders.CustomerID
 -- 	Categories.CategoryID	(1:M)	Products.CategoryID
 -- 	Employees.EmployeeID	(1:M)	Orders.EmployeeID
--- 	Orders.OrderID		(1:M)	OrderDetails.OrderID
--- 	Products.ProductID	(1:M)	OrderDetails.ProductID
--- 	Shippers.ShipperID	(1:M)	Orders.ShipperID
+-- 	Orders.OrderID			(1:M)	OrderDetails.OrderID
+-- 	Products.ProductID		(1:M)	OrderDetails.ProductID
+-- 	Shippers.ShipperID		(1:M)	Orders.ShipperID
 -- 	Suppliers.SupplierID	(1:M)	Products.SupplierID
 
 -- (2) Вывести страны клиентов (БД platform)
