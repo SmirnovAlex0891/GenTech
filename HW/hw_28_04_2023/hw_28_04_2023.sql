@@ -1,9 +1,10 @@
-select * from donations;
+select * from reactions;
 
 -- Вывести количественное распределение оценок (реакций) по стриму №1.
-select stream_id, count(*)
+select stream_id, value, count(*)
 from reactions
-where stream_id = 1;
+where stream_id = 1
+group by value;
 
 -- Вывести список стран, откуда идут пожертвования.
 select distinct users.country
