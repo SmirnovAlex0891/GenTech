@@ -33,7 +33,9 @@ order by duration_minute desc
 limit 1;
 
 -- Вывести среднюю стоимость билета для каждого фильма (ср/стоимость и название фильма - проекция)
-select (timetable.low_seat_price + timetable.vip_seat_price) / 2 as average_cost, movies.title as movi_name
-from timetable
-left join movies on timetable.movie_id=movies.movie_id;
+select avg(tickets.cost), movies.title as movi_name
+from tickets
+left join timetable on tickets.timetable_id=timetable.timetable_id
+left join movies on timetable.movie_id=movies.movie_id
+group by movies.movie_id;
 
