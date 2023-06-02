@@ -1,0 +1,57 @@
+https://dbdiagram.io/d/647a40c7722eb774944dc6df
+
+
+Table users {
+  user_id int pk
+  fullname varchar(128)
+  bank_account_id int
+  is_blocked bool
+  created_at timestamp
+}
+
+Table bank_accounts {
+  bank_account_id int pk
+  created_at timestamp
+  user_id int
+  currency_id int
+  amount_of_funds numeric(8.2)
+  is_blocked bool
+}
+
+Table transactions {
+  transaction_id int pk
+  sender int
+  recipient int
+  currency_id int
+  amount numeric(8.2)
+  created_at timestamp
+  is_approved bool
+
+}
+
+Table currency {
+  currency_id int pk
+  currency_name varchar(128)  
+}
+
+Table credits {
+  credit_id int pk
+  credit_name varchar(128)
+  loan_recipient int
+  date_of_issue data
+  amount_of_credit numeric(8.2)
+  percent numeric(5.3)
+  is_blocked bool
+}
+
+Ref: "users"."user_id" < "bank_accounts"."user_id"
+
+Ref: "currency"."currency_id" < "bank_accounts"."currency_id"
+
+Ref: "currency"."currency_id" < "transactions"."currency_id"
+
+Ref: "users"."user_id" < "transactions"."sender"
+
+Ref: "users"."user_id" < "transactions"."recipient"
+
+Ref: "users"."user_id" < "credits"."loan_recipient"
